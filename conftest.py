@@ -1,5 +1,6 @@
 from selenium import webdriver
 import pytest
+import time
 
 
 def pytest_addoption(parser):
@@ -11,4 +12,5 @@ def browser(request):
     user_language = request.config.getoption("language")
     browser = webdriver.Chrome()
     yield browser
+    #time.sleep(5)
     browser.quit()
