@@ -12,5 +12,5 @@ def browser(request):
     user_language = request.config.getoption("language")
     browser = webdriver.Chrome()
     yield browser
-    #time.sleep(5)
+    #time.sleep(30)
     browser.quit()

@@ -1,13 +1,17 @@
 from selenium.webdriver.common.by import By
 
 
-class MainPageLocators:
+class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+
+
+class MainPageLocators:
+    pass
 
 
 class LoginPageLocators:
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
-    REGISTER_FORM = (By.CSS_SELECTOR, "#register_form_incorrect")
+    REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
 
 
 class ProductPageLocators:
@@ -16,3 +20,4 @@ class ProductPageLocators:
     ITEM_PRICE = (By.CSS_SELECTOR, ".product_main .price_color")
     ITEM_NAME = (By.CSS_SELECTOR, ".product_main h1")
     ITEM_NAME_IN_MESSAGES_DIV = (By.CSS_SELECTOR, "#messages .alertinner strong")
+    SUCCESS_MESSAGES_DIV = (By.CSS_SELECTOR, "#messages .alert-success")
